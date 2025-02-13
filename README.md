@@ -21,8 +21,9 @@ There are 2 folders as mentioned on the pdf UmbracoCms and UmbracoBridge
 - To see the available endpoints just execute the following url: https://localhost:7239/openapi/v1.json //the port may change in your computer
 - Example of the available endpoints the port may change in your computer
 
-GET https://localhost:7239/Healthcheck -> to test Get HealthCheck
-POST https://localhost:7239/DocumentType -> to create a document example body, the field collection if of type
+- GET https://localhost:7239/Healthcheck -> to test Get HealthCheck
+
+- POST https://localhost:7239/DocumentType -> to create a document example body, the field collection if of type
   collection {
     "id" : "string"
   } in case you want to add something.
@@ -37,4 +38,4 @@ POST https://localhost:7239/DocumentType -> to create a document example body, t
     "collection": null, 
     "isElement": true 
 } 
-DELETE https://localhost:7239/DocumentType/{guid}
+- DELETE https://localhost:7239/DocumentType/{guid}
