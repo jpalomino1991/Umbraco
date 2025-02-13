@@ -18,6 +18,13 @@ namespace UmbracoBridge.Controllers
       [HttpPost]
       public async Task<IActionResult> CreateDocumentType([FromBody] DocumentType documentType)
       {
+         if (string.IsNullOrWhiteSpace(documentType.Alias) || 
+           string.IsNullOrWhiteSpace(documentType.Name) || 
+           string.IsNullOrWhiteSpace(documentType.Description) || 
+           !documentType.Icon.StartsWith("icon"))
+         {
+            return BadRequest("Invalid document type data. Ensure alias, name, and description are not empty and icon starts with 'icon'.");
+         }
          var requestUri = $"{_apiCredentials.baseUrl}/umbraco/management/api/v1/document-type";
          var request = await CreateRequestAsync(HttpMethod.Post, requestUri);
 
