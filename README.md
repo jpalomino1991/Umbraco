@@ -19,7 +19,8 @@ There are 2 folders as mentioned on the pdf UmbracoCms and UmbracoBridge
   }
 - After that just run dotnet build and the dotnet run to have the project running.
 - To see the available endpoints just execute the following url: https://localhost:7239/openapi/v1.json //the port may change in your computer
-- Example of the available endpoints the port may change in your computer
+
+#Example of the available endpoints the port may change in your computer
 
 - GET https://localhost:7239/Healthcheck -> to test Get HealthCheck
 
